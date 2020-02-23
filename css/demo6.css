@@ -1,0 +1,23 @@
+body {
+    font-family: titling-gothic-fb, sans-serif;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    background-image: url(../img/6.jpg);
+    --color-title: #ef2f60;
+}
+
+.content__title {
+	-webkit-text-stroke: 2px var(--color-title);
+	text-stroke: 2px var(--color-title);
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+	color: transparent;
+    font-size: 8vw;
+    font-weight: 800;   
+}
+
+.content__subtitle {
+	font-size: 1.25rem;
+}
+

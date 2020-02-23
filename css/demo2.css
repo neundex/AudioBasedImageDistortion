@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'ferrite_coreregular';
+    src: url('../fonts/ferritecore-regular-webfont.woff2') format('woff2'),
+         url('../fonts/ferritecore-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: news-gothic-std, "Arial Narrow", sans-serif;
+    background-image: url(../img/2.jpg);
+    --color-title: #e972ff;
+}
+
+.intro {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.content__subtitle {
+    font-style: italic;
+}
+
+.content__title {
+	font-family: 'ferrite_coreregular';
+}
+
+.content__credits {
+    font-style: italic;
+    margin-top: 7rem;
+    max-width: 40rem;
+}

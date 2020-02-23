@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'kionaregular';
+    src: url('../fonts/kiona-regular-webfont.woff') format('woff2'),
+         url('../fonts/kiona-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'walkway_condensedregular';
+    src: url('../fonts/walkway_condensed-webfont.woff2') format('woff2'),
+         url('../fonts/walkway_condensed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'kionaregular';
+    background-image: url(../img/1.jpg);
+}
+
+.content__credits {
+    font-family: 'walkway_condensedregular';
+    letter-spacing: 1px;
+    font-size: 1.15rem;
+}

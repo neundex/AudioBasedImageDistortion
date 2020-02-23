@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Audio-based Image Distortion | Demo 1 | Codrops</title>
+		<meta name="description" content="A set of experimental audio-based image distortion effects made with WebGL" />
+		<meta name="keywords" content="audio, distortion, image, webgl, music, visualizer, javascript, creative, web, demo" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+	</head>
+	<body>
+		<main>
+			<svg class="hidden">
+				<symbol id="icon-soundon" viewBox="0 0 32 31">
+					<title>Sound on</title>
+					<path d="M6.405 9.239H0v13.128h6.405l12.474 8.316V.923L6.405 9.239zM5.75 20.491H1.875v-9.377h3.876v9.377zm11.252 6.687l-9.376-6.25v-10.25l9.376-6.25v22.75zm10.884-21.32c5.484 5.483 5.484 14.406 0 19.89l-1.326-1.326c4.753-4.752 4.753-12.486 0-17.239l1.326-1.326zm-2.652 2.651c4.021 4.022 4.021 10.566 0 14.587l-1.326-1.326c3.29-3.29 3.29-8.644 0-11.935l1.326-1.326zm-2.652 2.652a6.571 6.571 0 010 9.283l-1.327-1.326a4.694 4.694 0 000-6.63l1.327-1.327z"/>
+				</symbol>
+				<symbol id="icon-soundoff" viewBox="0 0 32 31">
+					<title>Sound off</title>
+					<path d="M6.409 9.11H0v13.135h6.409l12.48 8.32V.79L6.41 9.109zm-.655 11.258H1.876v-9.382h3.878v9.382zm11.26 6.691L7.63 20.804V10.55l9.382-6.255V27.06zM32 11.65l-1.327-1.326-4.027 4.027-4.028-4.027-1.327 1.326 4.028 4.028-4.028 4.028 1.327 1.327 4.027-4.028 4.028 4.028L32 19.705l-4.028-4.028L32 11.65z"/>
+				</symbol>
+			</svg>
+			<div class="frame">
+				<h1 class="frame__title">Audio-based Image Distortion</h1>
+				<div class="frame__links">
+					<a href="http://tympanus.net/Tutorials/3DClothSlideshow/">Previous Demo</a>
+					<a href="https://tympanus.net/codrops/?p=47614">Article</a>
+					<a href="">GitHub</a>
+				</div>
+				<div class="frame__demos">
+					<a href="index.html" class="frame__demo frame__demo--current">1</a>
+					<a href="index2.html" class="frame__demo">2</a>
+					<a href="index3.html" class="frame__demo">3</a>
+					<a href="index4.html" class="frame__demo">4</a>
+					<a href="index5.html" class="frame__demo">5</a>
+					<a href="index6.html" class="frame__demo">6</a>
+					<a href="index7.html" class="frame__demo">7</a>
+				</div>
+				<button class="toggle toggle--on button" id="toggle-btn">
+					<svg class="toggle__icon toggle__icon--on"><use xlink:href="#icon-soundon"></use></svg>
+					<svg class="toggle__icon toggle__icon--off"><use xlink:href="#icon-soundoff"></use></svg>
+				</button>
+			</div>
+			<div class="content">
+				<h3 class="content__subtitle">An Onum Barr film</h3>
+				<h2 class="content__title">Substrate</h2>
+				<div class="content__credits">Mechanic Sky Enterprises <small>presents a</small> Mechanic Sky <small>production in association with</small> Humanae Future <small>an</small> Onum Barr <small>Film</small> Susan Calvin Arkady Darell Lors Avakim Raych Seldon "Substrate" <small>music by</small> Danny Greehouse <small>costume designer</small> Laura Kenister <small>visual effects supervisor</small> Frederick Mounte <small>editors</small> Onum Barr Mark Singer <small>production designer</small> Andy Nichols <small>director of photography</small> Carol P. Wyonast <small>written by</small> Onum Barr <small>produced by</small> Onum Barr David Loyman <small>directed by</small> Onum Barr
+       			</div>
+			</div>
+			<div class="screen screen--grid intro">
+				<p class="intro__content">
+					<span class="intro__content-line">Mechanic Sky</span>
+					<span class="intro__content-line intro__content-line--small">presents</span>
+				</p>
+				<p class="intro__content">
+					<span class="intro__content-line intro__content-line--small">in association with</span>
+					<span class="intro__content-line">Humanae Future</span>
+				</p>
+			</div>
+			<div class="screen screen--flex action">
+				<span class="action__line">Turn your sound on</span>
+				<button id="play-btn" class="button button--box">Play</button>
+			</div>
+		</main>
+		<div id="p5_loading" class="p5_loading">
+			<div class="p5_loading__inner"></div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
+		<script src="js/demo1.js"></script>
+		<!--script src="https://tympanus.net/codrops/adpacks/demoad.js"></script-->
+	</body>
+</html>

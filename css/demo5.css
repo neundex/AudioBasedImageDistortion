@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'tall_dark_and_handsomeCn';
+    src: url('../fonts/talldark-webfont.woff2') format('woff2'),
+         url('../fonts/talldark-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tall_films_expandedregular';
+    src: url('../fonts/tall_films_expanded-webfont.woff2') format('woff2'),
+         url('../fonts/tall_films_expanded-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: niveau-grotesk, sans-serif;
+    background-image: url(../img/5.jpg);
+    --color-title: #6bffde;
+    --color-link: #6bffde;
+}
+
+.content__title {
+    font-size: 8vw;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+}
+
+.content__subtitle,
+.content__credits {
+    font-size: 1.25rem;
+    font-family: 'tall_films_expandedregular';
+    color: var(--color-title);
+}
+
+.content__subtitle {
+    font-size: 2rem;
+}
