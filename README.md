@@ -17,7 +17,7 @@ This resource can be used freely in personal or commercial projects such as webs
 
 ## Misc
 
-Follow Yannis: [Twitter](), [Dribbble](), [Google+](), [GitHub]() 
+Follow Yannis: [Web](https://www.neundex.com), [Twitter](https://www.twitter.com/neundex), [Instagram](https://www.instagram.com/neundex)
 
 Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/codrops), [GitHub](https://github.com/codrops), [Instagram](https://www.instagram.com/codropsss/)
 
