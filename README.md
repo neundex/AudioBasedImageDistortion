@@ -2,7 +2,7 @@
 
 A set of experimental audio-based image distortion effects made with WebGL.
 
-![Image Title](link)
+![Featured](https://tympanus.net/codrops/wp-content/uploads/2020/02/Soundbasedimagedistortion_featured.jpg)
 
 [Article on Codrops](https://tympanus.net/codrops/?p=47614)
 
