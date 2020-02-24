@@ -4,9 +4,9 @@ A set of experimental audio-based image distortion effects made with WebGL.
 
 ![Image Title](link)
 
-[Article on Codrops](https://tympanus.net/codrops/?p=)
+[Article on Codrops](https://tympanus.net/codrops/?p=47614)
 
-[Demo](http://tympanus.net/Development/.../)
+[Demo](http://tympanus.net/Development/AudioBasedImageDistortion/)
 
 ## Credits
 

@@ -20,7 +20,7 @@ body {
     background-image: url(../img/8.jpg);
     font-weight: 500;
     font-size: 0.85rem;
-    --color-link: #c3c9fe;
+    --color-link: #d3e5fc;
 }
 
 .screen {
@@ -36,4 +36,5 @@ body {
     font-family: 'walkway_condensedregular';
     letter-spacing: 1px;
     font-size: 1.15rem;
+    max-width: 42rem;
 }
