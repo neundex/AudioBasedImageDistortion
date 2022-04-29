@@ -16,10 +16,11 @@
 
 @font-face {
   font-family: "axiforma";
-  src: url("../fonts/Axiforma-Black.otf") format("otf");
+  src: url("../fonts/Axiforma-Black.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+
 .container {
   position: relative;
   width: 100%;
@@ -41,13 +42,11 @@ body {
   scroll-behavior: smooth;
   font-family: "kionaregular";
   text-align: center;
-  font-weight: 500;
-  font-size: 0.85rem;
-  --color-link: #d3e5fc;
 }
 
 .title {
   margin-block-end: 0;
+  margin-block-start: 0;
   font-family: "axiforma";
   font-size: max(80px, 8vw);
   font-weight: 900;
@@ -55,12 +54,11 @@ body {
 }
 
 .credits {
-  display: inline-block;
   margin-top: 0;
   font-family: "walkway_condensedregular";
   letter-spacing: 1px;
-  font-size: 1.15rem;
-  max-width: 42rem;
+  font-size: clamp(16px, 4vw, 30px);
+  color: black;
 }
 
 .lower {
@@ -81,4 +79,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+important {
+  text-transform: uppercase;
 }
