@@ -27,6 +27,7 @@
   height: 100vh;
   scroll-behavior: smooth;
   overflow: auto;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
 }
 .section {
