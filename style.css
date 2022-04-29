@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "kionaregular";
+  src: url("../fonts/kiona-regular-webfont.woff") format("woff2"),
+    url("../fonts/kiona-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "walkway_condensedregular";
+  src: url("../fonts/walkway_condensed-webfont.woff2") format("woff2"),
+    url("../fonts/walkway_condensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "axiforma";
+  src: url("../fonts/Axiforma-Black.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+.section {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  scroll-snap-align: start;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "kionaregular";
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.85rem;
+  --color-link: #d3e5fc;
+}
+
+.title {
+  margin-block-end: 0;
+  font-family: "axiforma";
+  font-size: max(80px, 8vw);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.credits {
+  display: inline-block;
+  margin-top: 0;
+  font-family: "walkway_condensedregular";
+  letter-spacing: 1px;
+  font-size: 1.15rem;
+  max-width: 42rem;
+}
+
+.lower {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
