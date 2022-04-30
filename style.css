@@ -59,7 +59,6 @@ body {
 
 .center {
   font-family: "kionaregular";
-  font-size: 40px;
 }
 
 .lower {
@@ -75,9 +74,13 @@ body {
   aspect-ratio: 16/9;
 }
 
-@media screen and (max-width: 1000px) {
-  .lower {
-    margin-bottom: 12rem;
+.landscape {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+  .landscape {
+    display: block;
   }
 }
 
@@ -98,13 +101,11 @@ body {
 
 .subtitle {
   font-family: "kionaregular";
-  font-size: 2.5rem;
   margin-block-start: 0;
 }
 
 .credits {
   font-size-adjust: none;
-  font-size: 40px;
   margin-top: 0;
   font-family: "walkway_condensedregular";
   letter-spacing: 1px;
@@ -124,7 +125,7 @@ body {
 }
 
 .logos > img {
-  max-height: 4vh;
+  max-height: 6vh;
   object-fit: contain;
   filter: grayscale(100%);
 }
@@ -159,4 +160,8 @@ important {
 .fa-twitter {
   background: #55acee;
   color: white;
+}
+
+form {
+  font-family: "kionaregular";
 }
