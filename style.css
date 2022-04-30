@@ -21,8 +21,24 @@
   font-style: normal;
 }
 
+@keyframes ltr {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 95%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
 .container {
-  position: relative;
   width: 100%;
   height: 100vh;
   scroll-behavior: smooth;
@@ -33,56 +49,73 @@
 .section {
   width: 100%;
   height: 100vh;
-  background-size: cover;
   scroll-snap-align: start;
   overflow: hidden;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  font-family: "kionaregular";
-  text-align: center;
-}
-
-.title {
-  margin-block-end: 0;
-  margin-block-start: 5rem;
-  font-family: "axiforma";
-  font-size: max(80px, 8vw);
-  font-weight: 900;
-  line-height: 1;
-}
-
-.credits {
-  max-width: 65vw;
-  margin-top: 0;
-  font-family: "walkway_condensedregular";
-  letter-spacing: 1px;
-  font-size: clamp(16px, 4vw, 30px);
-  color: black;
-}
-
 .lower {
-  background-color: white;
-  position: absolute;
-  bottom: 2rem;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  align-items: center;
+  height: 100%;
 }
 
 .center {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  font-family: "kionaregular";
+  font-size: 40px;
+}
+
+.main-img {
+  aspect-ratio: 1/1;
+  padding: 20rem;
+  object-fit: none;
+  object-position: right bottom;
+  animation: ltr 4s;
+}
+.title {
+  margin-block-end: 0;
+  margin-block-start: 5rem;
+  font-family: "axiforma";
+  font-size: 16vw;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.subtitle {
+  font-family: "kionaregular";
+  font-size: 2.5rem;
+  margin-block-start: 0;
+}
+
+.credits {
+  font-size-adjust: none;
+  font-size: 40px;
+  margin-top: 0;
+  font-family: "walkway_condensedregular";
+  letter-spacing: 1px;
+  color: black;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.logos > img {
+  max-height: 4vh;
+  object-fit: contain;
+  filter: grayscale(100%);
 }
 
 important {
