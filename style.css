@@ -51,29 +51,21 @@ body {
   height: 100vh;
   scroll-snap-align: start;
   overflow: hidden;
-}
-.lower {
   display: flex;
-  flex-direction: column;
-  justify-content: end;
-  height: 100%;
 }
 
 .center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
   font-family: "kionaregular";
   font-size: 40px;
 }
 
+.lower {
+  margin-top: auto;
+}
+
 .main-img {
-  aspect-ratio: 1/1;
-  padding: 20rem;
-  object-fit: none;
-  object-position: right bottom;
+  width: 20vh;
+  height: 20vh;
   animation: ltr 4s;
 }
 .title {
