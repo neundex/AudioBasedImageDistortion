@@ -125,7 +125,7 @@ body {
 }
 
 .logos > img {
-  max-height: 6vh;
+  max-height: 4vh;
   object-fit: contain;
   filter: grayscale(100%);
 }
