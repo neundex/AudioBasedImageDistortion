@@ -66,6 +66,12 @@ body {
   margin-top: auto;
 }
 
+@media screen and (max-width: 1000px) {
+  .lower {
+    margin-bottom: 12rem;
+  }
+}
+
 .main-img {
   width: 20vh;
   height: 20vh;
