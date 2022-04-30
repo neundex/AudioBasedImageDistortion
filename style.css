@@ -66,6 +66,15 @@ body {
   margin-top: auto;
 }
 
+.video-backdrop {
+  background-color: black;
+}
+
+.video {
+  width: 100vw;
+  aspect-ratio: 16/9;
+}
+
 @media screen and (max-width: 1000px) {
   .lower {
     margin-bottom: 12rem;
@@ -82,8 +91,9 @@ body {
   margin-block-start: 5rem;
   font-family: "axiforma";
   font-size: 16vw;
-  font-weight: 900;
+  text-shadow: 0 0 0;
   line-height: 1;
+  font-weight: normal;
 }
 
 .subtitle {
