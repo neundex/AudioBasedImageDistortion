@@ -165,3 +165,10 @@ important {
 form {
   font-family: "kionaregular";
 }
+
+.top-block {
+  margin-top: 6rem;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
