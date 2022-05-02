@@ -63,6 +63,7 @@ body {
 
 .lower {
   margin-top: auto;
+  transition: opacity 0.7s linear;
 }
 
 .video-backdrop {
@@ -97,13 +98,11 @@ body {
   text-shadow: 0 0 0;
   line-height: 1;
   font-weight: normal;
-  animation: appear 4s;
 }
 
 .subtitle {
   font-family: "kionaregular";
   margin-block-start: 0;
-  animation: appear 4s;
 }
 
 .credits {
@@ -114,7 +113,6 @@ body {
   color: black;
   padding-right: 2rem;
   padding-left: 2rem;
-  animation: appear 4s;
 }
 
 .logos {
@@ -131,7 +129,6 @@ body {
   max-height: 4vh;
   object-fit: contain;
   filter: grayscale(100%);
-  animation: appear 4s;
 }
 
 important {
@@ -174,14 +171,12 @@ form {
   margin-top: 6rem;
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
+.hidden {
+  visibility: hidden;
+}
+
+.top-block {
+  margin-top: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
