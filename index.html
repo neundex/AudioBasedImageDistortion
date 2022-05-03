@@ -86,7 +86,8 @@
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
-  new Vivus('Layer_1', {duration: 200, type: "oneByOne", reverseStack: true }, ()=>{
+  new Vivus('Layer_1', {duration: 200, type: "delayed", reverseStack: true     
+}, ()=>{
     document.querySelector('.lower').classList.remove('hidden');
   });
 </script>
