@@ -1,0 +1,55 @@
+<DOCTYPE html>
+  <html>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+
+    <head>
+      <title>Planta</title>
+      <link rel="stylesheet" type="text/css" href="convite.css" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+    </head>
+    <body>
+      <div class="container">
+        <div class="section">
+          
+          <object id="Layer_1" data-name="Layer 1" data="./img/blocos/Asset 4.svg"
+            type="image/svg+xml""></object>
+          <div class="lower">
+           
+            <h2 class="title portrait">Obrigado</h2>
+            <h3 class="subtitle">vemo-nos dia 22.</h3>
+          
+          </div>
+        </div>
+  
+    </body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+      integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script>
+function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+}
+  new Vivus('Layer_1', {duration: 100, type: "delayed", reverseStack: true     
+}, ()=>{
+  });
+
+ 
+
+</script>
+  </html>
