@@ -55,6 +55,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+}
+
+.section:not(:nth-child(4)) {
+  max-width: 1000px;
 }
 
 .center {
@@ -90,10 +95,11 @@ body {
   animation: ltr 4s;
 }
 .title {
-  margin-block-end: 0;
+  margin: 0;
+  margin-top: 1rem;
   font-family: "axiforma";
-  font-size: 16vw;
   text-shadow: 0 0 0;
+  font-size: 80px;
   line-height: 1;
   font-weight: normal;
 }
@@ -164,6 +170,11 @@ form {
   font-family: "kionaregular";
 }
 
+.form-inner {
+  display: flex;
+  flex-direction: column;
+}
+
 .top-block {
   margin-top: auto;
   margin-bottom: auto;
@@ -177,4 +188,17 @@ form {
   margin-top: auto;
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+#Layer_1 {
+  margin-top: 1rem;
+}
+
+.before-title {
+  font-family: "walkway_condensedregular";
+  font-size: 1.5rem;
+}
+
+.separator {
+  max-width: 60%;
 }
