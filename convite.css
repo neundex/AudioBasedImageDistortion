@@ -58,6 +58,14 @@ body {
   margin: 0 auto;
 }
 
+.right {
+  width: 100%;
+  color: white;
+  text-align: right;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
 .section:not(:nth-child(4)) {
   max-width: 1000px;
 }
@@ -87,6 +95,10 @@ body {
   .landscape {
     display: block;
   }
+}
+
+.frame {
+  width: 100%;
 }
 
 .main-img {
@@ -167,6 +179,7 @@ important {
 }
 
 form {
+  width: 100%;
   font-family: "kionaregular";
 }
 
@@ -206,4 +219,9 @@ form {
 
 .tip {
   margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: black;
 }
