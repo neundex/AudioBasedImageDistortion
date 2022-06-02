@@ -101,6 +101,7 @@ body {
 
 .frame {
   width: 100%;
+  animation: search 10s ease-in-out alternate-reverse infinite;
 }
 
 .main-img {
