@@ -75,6 +75,8 @@ body {
 }
 
 .lower {
+  opacity: 0;
+  transition: all 1s;
   padding-bottom: 20vh;
 }
 
@@ -224,4 +226,8 @@ form {
 
 a {
   color: black;
+}
+
+.show {
+  opacity: 1;
 }
