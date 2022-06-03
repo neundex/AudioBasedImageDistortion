@@ -77,7 +77,6 @@ body {
 .lower {
   opacity: 0;
   transition: all 1s;
-  padding-bottom: 20vh;
 }
 
 .video-backdrop {
@@ -149,10 +148,9 @@ body {
   filter: grayscale(100%);
 }
 
-important {
-  text-transform: uppercase;
+.italic {
+  font-style: italic;
 }
-
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -275,4 +273,14 @@ select {
     0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
     0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
+}
+
+.invite {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+h3 {
+  margin-block: 0;
 }
