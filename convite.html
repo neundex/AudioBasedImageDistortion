@@ -61,19 +61,20 @@
 
             <form name="contact" action="/success.html" netlify>
               <div class="form-inner">
-                <label for="name">Nome <input type="text" name="name" /></label>
+                <label for="name">Nome <input type="text" name="name" required/></label>
                 <label for="email">Email <input type="email" name="email"
-                    /></label>
+                   required /></label>
                 <label for="plusOne">Traz +1<input type="checkbox"
                     name="plusOne" /></label>
                   <label for="session"> Sessão
-                    <select name="session">
-                      <option value="Planta">19:00</option>
-                      <option value="Planta">20:00</option>
+                    <select required name="session">
+                      <option value="" >Escolhe uma</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
                      
                     </select>
                   </label>
-                <button type="submit">Enviar</button>
+                <button class="button-10" type="submit">Enviar</button>
               </div>
             </form>
             <footer>
@@ -99,7 +100,6 @@
 
   new Vivus('Layer_1', {duration: 150, type: "delayed", reverseStack: true     
 }, ()=>{
-  console.log('asdasd')
   const element = document.querySelector('.lower')
   element.classList.add('show')
   });
