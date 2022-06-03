@@ -33,18 +33,19 @@
   <script>
    //where the magic happens
    function ical_download(){
-    
+     const urlQueryParams = new URLSearchParams(window.location.search);
+    const session = urlQueryParams.get('session');
     //name of event in iCal
-    this.eventName = 'My Cool Event';
+    this.eventName = 'Planta - Ante-Estreia';
     
     //name of file to download as
     this.fileName = 'my-event.ics';
     
     //start time of event in iCal
-    this.dateStart = '2016-04-01';
+    this.dateStart = `2022-06-22T${session}:00:00`;
     
     //end time of event in iCal
-    this.dateEnd = '2016-04-02';
+    this.dateEnd = '2022-06-22T20:30:00';
 
 
     //helper functions
