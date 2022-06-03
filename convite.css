@@ -61,7 +61,6 @@ body {
 .right {
   width: 100%;
   color: white;
-  text-align: right;
   font-size: 1.2rem;
   margin-top: 1rem;
 }
@@ -71,7 +70,9 @@ body {
 }
 
 .center {
-  font-family: "kionaregular";
+  font-family: sans-serif;
+  line-height: 1.5rem;
+  font-weight: 100;
 }
 
 .lower {
