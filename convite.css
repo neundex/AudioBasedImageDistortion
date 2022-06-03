@@ -183,12 +183,14 @@ important {
 
 form {
   width: 100%;
-  font-family: "kionaregular";
+  font-family: "walkway_condensedregular";
+  font-size: 1.5rem;
 }
 
 .form-inner {
   display: flex;
   flex-direction: column;
+  gap: 0.2rem;
 }
 
 .top-block {
@@ -231,4 +233,16 @@ a {
 
 .show {
   opacity: 1;
+}
+
+label {
+  display: flex;
+  gap: 1ch;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+input[type="email"] {
+  width: 100%;
 }
