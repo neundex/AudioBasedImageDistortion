@@ -10,7 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="fonts.css" />
+    <link rel="stylesheet" type="text/css" href="shared.css" />
     <link rel="stylesheet" type="text/css" href="convite.css" />
     <meta name="description" content="Convite ANTE-ESTREIA de PLANTA" />
     <meta property="og:title" content="Convite" />
@@ -81,25 +81,33 @@
           <div class="subscribe">
             <form name="invite" action="/success.html" netlify>
               <div class="form-inner">
-                <label for="name">Nome </label
-                ><input type="text" name="name" required />
-                <label for="email">Email </label
-                ><input type="email" name="email" required />
-                <label for="plusOne">Traz +1</label
-                ><input type="checkbox" name="plusOne" />
-                <label for="session"> Sessão </label>
+                <label for="name">Nome</label>
+                <input type="text" name="name" required />
+
+                <label for="email">Email</label>
+                <input type="email" name="email" required />
+
+                <div class="input-checkbox">
+                  <label for="plusOne">Traz +1</label>
+                  <input type="checkbox" name="plusOne" />
+                </div>
+
+                <label for="session">Sessão</label>
                 <select required name="session">
                   <option value="">Escolhe uma</option>
                   <option value="19">19:00</option>
                   <option value="20">20:00</option>
                 </select>
+
                 <button class="button-10" type="submit">Enviar</button>
               </div>
             </form>
             <footer>
               <small>
                 Obra protegida por direitos de autor. <br />
-                <a href="mailto:zemaria@gmail.com">Entrar em contacto.</a>
+                <a href="mailto:zemaria@gmail.com" target="_blank">
+                  Entrar em contacto.
+                </a>
                 <br />
               </small>
             </footer>

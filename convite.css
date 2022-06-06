@@ -1,40 +1,3 @@
-@keyframes ltr {
-  0% {
-    opacity: 0%;
-  }
-
-  100% {
-    opacity: 95%;
-  }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  text-align: center;
-}
-
-.container {
-  width: 100%;
-  height: 100vh;
-  scroll-behavior: smooth;
-  overflow: auto;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-}
-.section {
-  width: 100%;
-  height: 100vh;
-  scroll-snap-align: start;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
 .right {
   width: 100%;
   color: white;
@@ -160,7 +123,7 @@ body {
 
 form {
   width: 100%;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 
 .form-inner {
@@ -217,20 +180,24 @@ label {
   justify-content: space-between;
 }
 
-input[type="text"] {
-  width: 100%;
-  height: 2rem;
-}
-input[type="email"] {
-  width: 100%;
-  height: 2rem;
-}
-input[type="checkbox"] {
-  width: 100%;
-  height: 2rem;
-}
+input[type="text"],
+input[type="email"],
 select {
+  font: inherit;
+  color: inherit;
   width: 100%;
+  /* height: 2rem; */
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  line-height: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid black;
+}
+
+input[type="checkbox"] {
+  /* width: 100%; */
+  width: 2rem;
   height: 2rem;
 }
 
@@ -270,4 +237,13 @@ select {
 
 h3 {
   margin-block: 0;
+}
+
+.input-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.input-checkbox label {
+  flex: 1;
 }

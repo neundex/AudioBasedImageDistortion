@@ -1,0 +1,78 @@
+/* Fonts */
+
+@font-face {
+  font-family: "kionaregular";
+  src: url("../fonts/kiona-regular-webfont.woff") format("woff2"),
+    url("../fonts/kiona-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "walkway_condensedregular";
+  src: url("../fonts/walkway_condensed-webfont.woff2") format("woff2"),
+    url("../fonts/walkway_condensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "axiforma";
+  src: url("../fonts/Axiforma-Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* General styles */
+
+@keyframes ltr {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 95%;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.container,
+.section {
+  width: 100%;
+  height: 100vh;
+  /* min-height: 100vh; */
+}
+
+.container {
+  scroll-behavior: smooth;
+  overflow: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  scroll-snap-align: start;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
