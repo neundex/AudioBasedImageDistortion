@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "kionaregular";
+  src: url("../fonts/kiona-regular-webfont.woff") format("woff2"),
+    url("../fonts/kiona-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "walkway_condensedregular";
+  src: url("../fonts/walkway_condensed-webfont.woff2") format("woff2"),
+    url("../fonts/walkway_condensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "axiforma";
+  src: url("../fonts/Axiforma-Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
