@@ -1,158 +1,170 @@
-<DOCTYPE html>
-  <html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Planta</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
+    />
+    <link rel="stylesheet" type="text/css" href="convite.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="section">
+        <object
+          id="Layer_1"
+          data-name="Layer 1"
+          data="./img/blocos/Asset 4.svg"
+          type="image/svg+xml"
+        ></object>
+        <div class="lower">
+          <h2 class="title portrait" style="font-size: 4rem">Obrigado</h2>
+          <h3 class="subtitle">vemo-nos dia 22.</h3>
 
-    <head>
-      <title>Planta</title>
-      <link rel="stylesheet" type="text/css" href="convite.css" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-        />
-    </head>
-    <body>
-      <div class="container">
-        <div class="section">
-          
-          <object id="Layer_1" data-name="Layer 1" data="./img/blocos/Asset 4.svg"
-            type="image/svg+xml""></object>
-          <div class="lower">
-           
-            <h2 class="title portrait" style="font-size:4rem;">Obrigado</h2>
-            <h3 class="subtitle">vemo-nos dia 22.</h3>
-          
-            <button style="font-size:32px; visibility: hidden;" onclick="ical_download()">Download</button>
-          </div>
+          <button
+            style="font-size: 32px; visibility: hidden"
+            onclick="ical_download()"
+          >
+            Download
+          </button>
         </div>
- 
-  
-  
-  <script>
-   //where the magic happens
-   function ical_download(){
-     const urlQueryParams = new URLSearchParams(window.location.search);
-    const session = urlQueryParams.get('session');
-    //name of event in iCal
-    this.eventName = 'Planta - Ante-Estreia';
-    
-    //name of file to download as
-    this.fileName = 'my-event.ics';
-    
-    //start time of event in iCal
-    this.dateStart = `2022-06-22T${session}:00:00`;
-    
-    //end time of event in iCal
-    this.dateEnd = '2022-06-22T20:30:00';
+      </div>
+      <script>
+        //where the magic happens
+        function ical_download() {
+          const urlQueryParams = new URLSearchParams(window.location.search);
+          const session = urlQueryParams.get("session");
+          //name of event in iCal
+          this.eventName = "Planta - Ante-Estreia";
 
+          //name of file to download as
+          this.fileName = "my-event.ics";
 
-    //helper functions
-    
-    //iso date for ical formats
-    this._isofix = function(d){
-		  var offset = ("0"+((new Date()).getTimezoneOffset()/60)).slice(-2);
+          //start time of event in iCal
+          this.dateStart = `2022-06-22T${session}:00:00`;
 
-	    if(typeof d=='string'){
-		    return d.replace(/\-/g, '')+'T'+offset+'0000Z';
-	    }else{
-				return d.getFullYear()+this._zp(d.getMonth()+1)+this._zp(d.getDate())+'T'+this._zp(d.getHours())+"0000Z";
-		  }
-		}
-		
-    //zero padding for data fixes
-    this._zp = function(s){ return ("0"+s).slice(-2); }
-		this._save = function(fileURL){
-		  if (!window.ActiveXObject) {
-		      var save = document.createElement('a');
-		      save.href = fileURL;
-		      save.target = '_blank';
-		      save.download = this.fileName || 'unknown';
-		
-		      var evt = new MouseEvent('click', {
-		          'view': window,
-		          'bubbles': true,
-		          'cancelable': false
-		      });
-		      save.dispatchEvent(evt);
-		
-		      (window.URL || window.webkitURL).revokeObjectURL(save.href);
-		  }
-		
-		  // for IE < 11
-		  else if ( !! window.ActiveXObject && document.execCommand)     {
-		      var _window = window.open(fileURL, '_blank');
-		      _window.document.close();
-		      _window.document.execCommand('SaveAs', true, this.fileName || fileURL)
-		      _window.close();
-		  }	
-		}    
-		
-		
-    var now = new Date();
-    var ics_lines = [
-     "BEGIN:VCALENDAR",
-     "VERSION:2.0",
-     "PRODID:-//Addroid Inc.//iCalAdUnit//EN",
-     "METHOD:REQUEST",
-     "BEGIN:VEVENT",
-     "UID:event-"+now.getTime()+"@addroid.com",
-     "DTSTAMP:"+this._isofix(now),
-     "DTSTART:"+this._isofix(this.dateStart),
-     "DTEND:"+this._isofix(this.dateEnd),
-     "DESCRIPTION:"+this.eventName,
-     "SUMMARY:"+this.eventName,
-     "LAST-MODIFIED:"+this._isofix(now),
-     "SEQUENCE:0",
-     "END:VEVENT",
-     "END:VCALENDAR"
-    ];
+          //end time of event in iCal
+          this.dateEnd = "2022-06-22T20:30:00";
 
-    var dlurl = 'data:text/calendar;base64,'+btoa(ics_lines.join('\r\n'));
-    
-		try {
-			this._save(dlurl);
-		}catch(e){
-			console.log(e);
-		}
-    
-    
-  
-   }
-   
-   
-  
-  </script>
-    </body>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
-      integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
-    <script>
-function fade(element) {
-    var op = 1;  // initial opacity
-    var timer = setInterval(function () {
-        if (op <= 0.1){
-            clearInterval(timer);
-            element.style.display = 'none';
+          //helper functions
+
+          //iso date for ical formats
+          this._isofix = function (d) {
+            var offset = ("0" + new Date().getTimezoneOffset() / 60).slice(-2);
+
+            if (typeof d == "string") {
+              return d.replace(/\-/g, "") + "T" + offset + "0000Z";
+            } else {
+              return (
+                d.getFullYear() +
+                this._zp(d.getMonth() + 1) +
+                this._zp(d.getDate()) +
+                "T" +
+                this._zp(d.getHours()) +
+                "0000Z"
+              );
+            }
+          };
+
+          //zero padding for data fixes
+          this._zp = function (s) {
+            return ("0" + s).slice(-2);
+          };
+          this._save = function (fileURL) {
+            if (!window.ActiveXObject) {
+              var save = document.createElement("a");
+              save.href = fileURL;
+              save.target = "_blank";
+              save.download = this.fileName || "unknown";
+
+              var evt = new MouseEvent("click", {
+                view: window,
+                bubbles: true,
+                cancelable: false,
+              });
+              save.dispatchEvent(evt);
+
+              (window.URL || window.webkitURL).revokeObjectURL(save.href);
+            }
+
+            // for IE < 11
+            else if (!!window.ActiveXObject && document.execCommand) {
+              var _window = window.open(fileURL, "_blank");
+              _window.document.close();
+              _window.document.execCommand(
+                "SaveAs",
+                true,
+                this.fileName || fileURL
+              );
+              _window.close();
+            }
+          };
+
+          var now = new Date();
+          var ics_lines = [
+            "BEGIN:VCALENDAR",
+            "VERSION:2.0",
+            "PRODID:-//Addroid Inc.//iCalAdUnit//EN",
+            "METHOD:REQUEST",
+            "BEGIN:VEVENT",
+            "UID:event-" + now.getTime() + "@addroid.com",
+            "DTSTAMP:" + this._isofix(now),
+            "DTSTART:" + this._isofix(this.dateStart),
+            "DTEND:" + this._isofix(this.dateEnd),
+            "DESCRIPTION:" + this.eventName,
+            "SUMMARY:" + this.eventName,
+            "LAST-MODIFIED:" + this._isofix(now),
+            "SEQUENCE:0",
+            "END:VEVENT",
+            "END:VCALENDAR",
+          ];
+
+          var dlurl =
+            "data:text/calendar;base64," + btoa(ics_lines.join("\r\n"));
+
+          try {
+            this._save(dlurl);
+          } catch (e) {
+            console.log(e);
+          }
         }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.1;
-    }, 50);
-}
-  new Vivus('Layer_1', {duration: 100, type: "delayed", reverseStack: true     
-}, ()=>{
-
-   const element = document.querySelector('.lower')
-  element.classList.add('show')
-  const btn = document.querySelector('button')
-  btn.click()
-
-  });
-
- 
-
-</script>
-  </html>
+      </script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+        integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script>
+        function fade(element) {
+          var op = 1; // initial opacity
+          var timer = setInterval(function () {
+            if (op <= 0.1) {
+              clearInterval(timer);
+              element.style.display = "none";
+            }
+            element.style.opacity = op;
+            element.style.filter = "alpha(opacity=" + op * 100 + ")";
+            op -= op * 0.1;
+          }, 50);
+        }
+        new Vivus(
+          "Layer_1",
+          { duration: 100, type: "delayed", reverseStack: true },
+          () => {
+            const element = document.querySelector(".lower");
+            element.classList.add("show");
+            const btn = document.querySelector("button");
+            btn.click();
+          }
+        );
+      </script>
+      <!-- </body> -->
+      <!-- </html> -->
+    </div>
+  </body>
+</html>

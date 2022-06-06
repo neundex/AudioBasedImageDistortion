@@ -1,130 +1,126 @@
-<DOCTYPE html>
-  <html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="main-title">Convite - Planta</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
+    />
+    <link rel="stylesheet" type="text/css" href="convite.css" />
+    <meta name="description" content="Convite ANTE-ESTREIA de PLANTA" />
+    <meta property="og:title" content="Convite" />
+    <meta property="og:url" content="https://www.planta-filme.com/convite" />
+    <meta property="og:description" content="Convite ANTE-ESTREIA de PLANTA" />
+    <meta
+      property="og:image"
+      content="http://www.planta-filme.com/public/preview2.png"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_PT" />
+    <!-- ****** faviconit.com favicons ****** -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="section">
+        <p class="invite">
+          <br />
+          RnC Records, Miguel Pité e Zé Maria <br /><span class="italic"
+            >têm o prazer de te convidar para a ANTE-ESTREIA de</span
+          >
+        </p>
+        <object
+          id="Layer_1"
+          data-name="Layer 1"
+          data="./img/Asset 2222.svg"
+          type="image/svg+xml"
+        ></object>
+        <div class="lower">
+          <h2 class="title portrait">Planta</h2>
+          <h3 class="invite">um filme de Miguel Pité</h3>
+          <br />
+          <p class="credits">
+            Quarta-feira, 22 de junho no Cinema São Jorge. <br />Sessões às
+            19:00 e às 20:00.
+          </p>
+          <div class="logos">
+            <img src="/img/rtp.png" alt="" />
+            <img src="/img/spa.png" alt="" />
+          </div>
+          <p class="credits">
+            <br />
+            (faz scroll)
+          </p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="credits right">"Não sabemos o que isto é.</div>
 
-    <head>
-      <title id="main-title">Convite - Planta</title>
-      <link rel="stylesheet" type="text/css" href="convite.css" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-        />
-      <meta name="description" content="Convite ANTE-ESTREIA de PLANTA" />
-      <meta property="og:title" content="Convite" />
-      <meta property="og:url" content="https://www.planta-filme.com/convite" />
-      <meta property="og:description" content="Convite ANTE-ESTREIA de PLANTA"
-        />
-      <meta property="og:image"
-        content="http://www.planta-filme.com/public/preview2.png" />
-      <meta property="og:type" content="article" />
-      <meta property="og:locale" content="pt_PT" />
-      <!-- ****** faviconit.com favicons ****** -->
+        <img class="frame" src="img/planta.png" alt="" />
+        <div class="credits right">Vem ver"</div>
+        <img class="frame" src="img/frame3.png" alt="" />
+        <div class="credits right">e diz-nos."</div>
+      </div>
+      <div class="section">
+        <object
+          class="separator"
+          data="./img/blocos/Asset 18.svg"
+          type="image/svg+xml"
+        ></object>
 
-    </head>
-    <body>
-      <div class="container">
-        <div class="section">
-          <p class="invite">
-            <br>
-            RnC Records, Miguel Pité e Zé
-            Maria <br/><span class="italic">têm o prazer de te convidar
-                para a ANTE-ESTREIA de</span>
-            </p>
-            <object id="Layer_1" data-name="Layer 1" data="./img/Asset 2222.svg"
-              type="image/svg+xml""></object>
-            <div class="lower">
-
-              <h2 class="title portrait">Planta</h2>
-              <h3 class="invite">um filme de Miguel Pité</h3>
-              <br>
-              <p class="credits">
-                Quarta-feira, 22 de junho no Cinema São
-                Jorge. <br/>Sessões às 19:00 e às 20:00.
-                </p>
-                <div class="logos">
-                  <img src="/img/rtp.png" alt="" /> <img src="/img/spa.png"
-                    alt=""
-                    />
-                </div>
-                <p class="credits">
-                  <br>
-                  (faz scroll)
-                </p>
+        <h2 class="title portrait">RSVP</h2>
+        <div class="center">
+          Quarta-feira, dia 22 de Junho <br />
+          <a href="http://cinemasaojorge.pt">Cinema São Jorge</a>
+          <br />Avenida da Liberdade, nº.175 1250-141 Lisboa<br />
+          Sala 3
+          <div class="subscribe">
+            <form name="invite" action="/success.html" netlify>
+              <div class="form-inner">
+                <label for="name">Nome </label
+                ><input type="text" name="name" required />
+                <label for="email">Email </label
+                ><input type="email" name="email" required />
+                <label for="plusOne">Traz +1</label
+                ><input type="checkbox" name="plusOne" />
+                <label for="session"> Sessão </label>
+                <select required name="session">
+                  <option value="">Escolhe uma</option>
+                  <option value="19">19:00</option>
+                  <option value="20">20:00</option>
+                </select>
+                <button class="button-10" type="submit">Enviar</button>
               </div>
-            </div>
-            <div class="section">
-              <div class="credits right">"Não sabemos o que isto é.</div>
-
-              <img class="frame" src="img/planta.png" alt="">
-              <div class="credits right">Vem ver"</div>
-              <img class="frame" src="img/frame3.png" alt="">
-              <div class="credits right">e diz-nos."</div>
-            </div>
-            <div class="section">
-              <object class="separator" data="./img/blocos/Asset 18.svg"
-                type="image/svg+xml""></object>
-
-
-              <h2 class="title portrait">RSVP</h2>
-              <div class="center">Quarta-feira, dia 22 de Junho <br/> <a
-                    href="http://cinemasaojorge.pt">Cinema São Jorge</a> <br />Avenida
-                  da Liberdade, nº.175
-                  1250-141 Lisboa<br/> Sala 3
-                    <div class="subscribe">
-
-                      <form name="invite" action="/success.html" netlify>
-                        <div class="form-inner">
-                          <label for="name">Nome </label><input type="text"
-                            name="name"
-                            required/>
-                          <label for="email">Email </label><input type="email"
-                            name="email"
-                            required />
-                          <label for="plusOne">Traz +1</label><input
-                            type="checkbox"
-                            name="plusOne" />
-                          <label for="session"> Sessão
-
-                          </label> <select required name="session">
-                            <option value="">Escolhe uma</option>
-                            <option value="19">19:00</option>
-                            <option value="20">20:00</option>
-
-                          </select>
-                          <button class="button-10" type="submit">Enviar</button>
-                        </div>
-                      </form>
-                      <footer>
-                        <small>
-                          Obra protegida por direitos de autor. <br>
-                          <a href="mailto:zemaria@gmail.com">Entrar em contacto.</a>
-                          <br />
-                        </small>
-                      </footer>
-                    </div>
-                  </div>
-
-
-
-                </div>
-              </div>
-            </body>
-            <script
-              src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
-              integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="crossorigin="anonymous"
-              referrerpolicy="no-referrer"></script>
-            <script>
-
-  new Vivus('Layer_1', {duration: 150, type: "delayed", reverseStack: true     
-}, ()=>{
-  const element = document.querySelector('.lower')
-  element.classList.add('show')
-  });
-
- 
-
-</script>
-          </html>
+            </form>
+            <footer>
+              <small>
+                Obra protegida por direitos de autor. <br />
+                <a href="mailto:zemaria@gmail.com">Entrar em contacto.</a>
+                <br />
+              </small>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+    integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    new Vivus(
+      "Layer_1",
+      { duration: 150, type: "delayed", reverseStack: true },
+      () => {
+        const element = document.querySelector(".lower");
+        element.classList.add("show");
+      }
+    );
+  </script>
+</html>
